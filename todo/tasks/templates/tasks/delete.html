@@ -1,0 +1,32 @@
+<h1>Are you sure you want to delete "{{item}}"?</h1>
+
+<style>
+    body{
+      background-color: #5ea2c3;
+   }
+
+   h1{
+      text-align: center;
+   }
+
+    .btn{
+      background-color: green;
+      text-decoration:none;
+       float: left;
+
+   }
+   .btn-red{
+      background-color: red;
+      text-decoration:none;
+       float: right;
+   }
+
+
+</style>
+
+<a class="btn-red" href="{% url 'list' %}"> cancel</a>
+
+<form method="post" action="">
+    {%csrf_token%}
+    <input class="btn" type="submit" name="Confirm" value="delete">
+</form>
